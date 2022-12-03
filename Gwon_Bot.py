@@ -77,13 +77,5 @@ async def on_message(message):
         await message.channel.send('저' + message.content)
 
 
-def start():
-    try:
-        token = os.environ["TOKEN"]
+token = os.environ["TOKEN"]
         bot.run(token)
-    except:
-        from TOKEN import load_token
-        token = load_token()
-        bot.run(token)
-
-start()
